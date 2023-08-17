@@ -1,0 +1,91 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="d:\odoo\technical-training-sandbox\estate.list">
+      <field name="name">D:\odoo\technical-training-sandbox\estate list</field>
+      <field name="model">d:\odoo\technical-training-sandbox\estate.d:\odoo\technical-training-sandbox\estate</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="d:\odoo\technical-training-sandbox\estate.action_window">
+      <field name="name">D:\odoo\technical-training-sandbox\estate window</field>
+      <field name="res_model">d:\odoo\technical-training-sandbox\estate.d:\odoo\technical-training-sandbox\estate</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="d:\odoo\technical-training-sandbox\estate.action_server">
+      <field name="name">D:\odoo\technical-training-sandbox\estate server</field>
+      <field name="model_id" ref="model_d:\odoo\technical-training-sandbox\estate_d:\odoo\technical-training-sandbox\estate"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="D:\odoo\technical-training-sandbox\estate" id="d:\odoo\technical-training-sandbox\estate.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="d:\odoo\technical-training-sandbox\estate.menu_1" parent="d:\odoo\technical-training-sandbox\estate.menu_root"/>
+    <menuitem name="Menu 2" id="d:\odoo\technical-training-sandbox\estate.menu_2" parent="d:\odoo\technical-training-sandbox\estate.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="d:\odoo\technical-training-sandbox\estate.menu_1_list" parent="d:\odoo\technical-training-sandbox\estate.menu_1"
+              action="d:\odoo\technical-training-sandbox\estate.action_window"/>
+    <menuitem name="Server to list" id="d:\odoo\technical-training-sandbox\estate" parent="d:\odoo\technical-training-sandbox\estate.menu_2"
+              action="d:\odoo\technical-training-sandbox\estate.action_server"/>
+-->
+    <record id="view_estate_property_form" model="ir.ui.view">
+    <field name="name">estate.property.form</field>
+    <field name="model">estate.property</field>
+    <field name="arch" type="xml">
+        <form>
+            <group>
+                <group>
+                    <field name="name"/>
+                    <field name="postcode"/>
+                    <field name="date_availability"/>
+                    <field name="description"/>
+                </group>
+                <group>
+                    <field name="bedrooms"/>
+                    <field name="living_area"/>
+                    <field name="facades"/>
+                </group>
+                <group>
+                    <field name="garage"/>
+                    <field name="garden"/>
+                    <field name="garden_area"/>
+                    <field name="garden_orientation"/>
+                </group>
+            </group>
+            <group>
+
+                <field name="selling_price"/>
+            </group>
+        </form>
+    </field>
+</record>
+  </data>
+</odoo>
