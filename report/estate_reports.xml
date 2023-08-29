@@ -1,0 +1,11 @@
+<odoo>
+    <record id="report_Estate" model="ir.actions.report">
+        <field name="name">Unit Report</field>
+        <field name="model">estate.property</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">Jc.estate_unit_report</field>
+        <field name="report_file">Jc.estate_unit_report</field>
+        <field name="binding_model_id" ref="model_estate_property"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

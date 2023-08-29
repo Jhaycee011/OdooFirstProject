@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Real Estate",
+    'name': "Real_Estate",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -28,7 +28,9 @@
         'views/views.xml',
         'views/templates.xml',
         'views/estate_property_views.xml',
-        'views/estate_menus.xml'
+        'views/estate_menus.xml',
+        'report/estate_reports.xml',
+        'report/estate_template_reports.xml'
 
     ],
     # only loaded in demonstration mode
