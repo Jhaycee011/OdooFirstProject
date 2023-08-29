@@ -1,0 +1,138 @@
+<odoo>
+    <template id="estate_unit_report">
+        <t t-foreach="docs" t-as="estate">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>
+                            <span t-field="estate.name"/>
+                        </h2>
+                        <h3>
+                        <div>
+                            <strong>Selling Price: </strong>
+                            <span t-field="estate.selling_price"/>
+                        </div>
+                        <div>
+                            <strong>Initial Property Price: </strong>
+                            <span t-field="estate.expected_price"/>
+                        </div>
+                        <div>
+                            <strong>Post Code: </strong>
+                            <span t-field="estate.postcode"/>
+                        </div>
+
+                        <div>
+                            <strong>Date Available: </strong>
+                            <span t-field="estate.date_availability"/>
+                        </div>
+                        </h3>
+                        <div>
+                            <br>
+                                <br>
+                                    <h4>
+                                        Estate Rooms:
+                                        <p>
+                                        <div>
+                                            Bedrooms: <span t-field="estate.bedrooms"/>
+                                        </div>
+                                        <div>
+                                            Living Area(sqm): <span t-field="estate.living_area"/>
+                                        </div>
+                                        <div>
+                                            Facades: <span t-field="estate.facades"/>
+                                        </div>
+                                        <div>
+                                            <t t-if="estate.garage">
+                                                <p><strong>Garage:</strong> There is a garage inside the Estate</p>
+                                            </t>
+                                            <t t-if="not estate.garage">
+                                                <p><strong>Garage:</strong> There is no garage inside the Estate</p>
+                                            </t>
+                                        </div>
+                                        </p>
+                                    </h4>
+                                </br>
+                            </br>
+                        </div>
+                        <div>
+                            <br>
+                                <br>
+                                    <h4>
+                                        Garden Information:
+                                        <p>
+                                        <div>
+                                            <t t-if="estate.garden">
+                                                <p><strong>Garden:</strong> There is a garden inside the Estate</p>
+                                            </t>
+                                            <t t-if="not estate.garden">
+                                                <p><strong>Garden:</strong> There is no garden inside the Estate</p>
+                                            </t>
+                                        </div>
+                                        <div>
+                                            Garden Area(sqm): <span t-field="estate.garden_area"/>
+                                        </div>
+                                        <div>
+                                            Garden Orientation: <span t-field="estate.garden_orientation"/>
+                                        </div>
+                                        </p>
+                                    </h4>
+                                </br>
+                            </br>
+                        </div>
+                        <div>
+                            <br>
+                                <br>
+                                    <h4>
+                                        Other Facilities:
+                                        <p>
+                                        <div>
+                                            <t t-if="estate.x_pool">
+                                                <p><strong>Pool:</strong> There is a pool near the Estate</p>
+                                            </t>
+                                            <t t-if="not estate.x_pool">
+                                                <p><strong>Pool:</strong> There is no pool near the Estate</p>
+                                            </t>
+                                        </div>
+                                        <div>
+                                            <t t-if="estate.x_sauna">
+                                                <p><strong>Sauna:</strong> There is a sauna near the Estate</p>
+                                            </t>
+                                            <t t-if="not estate.x_sauna">
+                                                <p><strong>Sauna:</strong> There is no sauna near the Estate</p>
+                                            </t>
+                                        </div>
+                                        <div>
+                                            <t t-if="estate.x_gym">
+                                                <p><strong>Gym:</strong> There is a gym near the Estate</p>
+                                            </t>
+                                            <t t-if="not estate.x_gym">
+                                                <p><strong>Gym:</strong> There is no gym near the Estate</p>
+                                            </t>
+                                        </div>
+                                        <div>
+                                            <t t-if="estate.x_laundry">
+                                                <p><strong>Laundry services:</strong> There is a laundry service near the Estate</p>
+                                            </t>
+                                            <t t-if="not estate.x_laundry">
+                                                <p><strong>Laundry services:</strong> There is no laundry services near the Estate</p>
+                                            </t>
+                                        </div>
+                                        <div>
+                                            <t t-if="estate.restaurants">
+                                                <p><strong>Restaurants:</strong> There is a restaurant near the Estate</p>
+                                            </t>
+                                            <t t-if="not estate.restaurants">
+                                                <p><strong>Restaurants:</strong> There is no restaurant near the Estate</p>
+                                            </t>
+                                        </div>
+                                        </p>
+                                    </h4>
+                                </br>
+                            </br>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
